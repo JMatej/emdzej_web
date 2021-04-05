@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "iA Writer Duo S";
+  src: url("../../fonts/iAWriterDuoS-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "iA Writer Duospace";
+  src: url("../../fonts/iAWriterDuospace-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "iA Writer Mono S";
+  src: url("../../fonts/iAWriterMonoS-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "iA Writer Quattro S";
+  src: url("../../fonts/iAWriterQuattroS-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "iA Writer Duo S Bold";
+  src: url("../../fonts/iAWriterDuoS-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "iA Writer Duospace Bold";
+  src: url("../../fonts/iAWriterDuospace-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "iA Writer Mono S Bold";
+  src: url("../../fonts/iAWriterMonoS-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "iA Writer Quattro S Bold";
+  src: url("../../fonts/iAWriterQuattroS-Bold.woff2") format("woff2");
+}
+body {
+  width: 850px;
+  margin: 0 auto;
+  color: #1a1a1a;
+  font-family: "iA Writer Duospace", monospace;
+}
+
+.content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.headline {
+  margin: 20px 0 30px;
+  display: flex;
+}
+.headline .headline-name h1 {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  font-size: 3.2rem;
+  text-align: left;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.headline .headline-name p {
+  margin: -7px 0 0;
+  font-size: 1.2rem;
+  text-align: right;
+}
+.headline .headline-name .pron {
+  font-size: 0.8rem;
+  padding: 0;
+}
+.headline .headline-page {
+  width: 50%;
+}
+.headline .headline-page p {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+p {
+  line-height: 1.75;
+  font-size: 15px;
+  color: #4a4b4f;
+  text-align: justify;
+}
+
+span {
+  padding: 2px 6px;
+}
+
+a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+strong {
+  font-family: "iA Writer Quattro S Bold", monospace;
+}
+
+.page404 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.page404 strong {
+  font-size: 4.5rem;
+}
+.page404 h1 {
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles.css.map */
