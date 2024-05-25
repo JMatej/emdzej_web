@@ -1,0 +1,68 @@
+@use 'partials/fonts/blog_fonts';
+@use 'partials/vars';
+
+/** {
+  outline: 1px red solid;
+}*/
+
+body {
+  width: 820px;
+  margin: 0 auto;
+  text-align: center;
+  color: vars.$black-text;
+  
+  font-family: vars.$font-blog-text;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1.1em;
+}
+
+.content {
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 25px auto 0px;
+
+  font-family: vars.$font-blog-headline;
+  font-size: 3em;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  max-width: 90%;
+  margin: 15px auto;
+  text-align: justify;
+}
+
+.img-wrapper {
+  p {
+    margin: 0 auto;
+    text-align: center;
+
+    font-size: 0.9em;
+    font-weight: bold;
+    font-style: italic;
+  }
+}
+
+@media (max-width: 820px) {
+  body {
+    width: 100%;
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: max(30px, 6vw);
+  }
+
+  .img-wrapper {
+    p {
+      font-size: 0.9em;
+    }
+  }
+}

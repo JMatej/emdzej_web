@@ -1,0 +1,18 @@
+//TODO: Rename this file to something more specific
+@use 'vars';
+
+// base
+.yellow-bg { background-color: vars.$yellow-bg; }
+.blue-bg { background-color: vars.$blue-bg; }
+.green-bg { background-color: vars.$green-bg; }
+.red-bg { background-color: vars.$red-bg; }
+.yellow-text { color: vars.$yellow-text; }
+.blue-text { color: vars.$blue-text; }
+.green-text { color: vars.$green-text; }
+.red-text { color: vars.$red-text; }
+
+// subsites
+.blog-color { background-color: vars.$blog-color; }
+.inspo-color { background-color: vars.$inspo-color; }
+.register-color { background-color: vars.$register-color; }
+.lfcczsk-color { background-color: vars.$lfcczsk-color; }
