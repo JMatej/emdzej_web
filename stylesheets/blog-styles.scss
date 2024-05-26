@@ -1,5 +1,5 @@
-@use 'partials/fonts/blog_fonts';
-@use 'partials/vars';
+@use "partials/fonts/blog_fonts";
+@use "partials/vars";
 
 /** {
   outline: 1px red solid;
@@ -10,7 +10,7 @@ body {
   margin: 0 auto;
   text-align: center;
   color: vars.$black-text;
-  
+
   font-family: vars.$font-blog-text;
   font-weight: 400;
   font-optical-sizing: auto;
@@ -39,15 +39,14 @@ p {
   text-align: justify;
 }
 
-.img-wrapper {
-  p {
-    margin: 0 auto;
-    text-align: center;
+.img-description,
+#slider1 {
+  margin: 0 auto;
+  text-align: center;
 
-    font-size: 0.9em;
-    font-weight: bold;
-    font-style: italic;
-  }
+  font-size: 0.9em;
+  font-weight: bold;
+  font-style: italic;
 }
 
 @media (max-width: 820px) {
@@ -60,9 +59,8 @@ p {
     font-size: max(30px, 6vw);
   }
 
-  .img-wrapper {
-    p {
-      font-size: 0.9em;
-    }
+  .img-description,
+  #slider1 {
+    font-size: 0.9em;
   }
 }

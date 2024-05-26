@@ -43,7 +43,8 @@ p {
   text-align: justify;
 }
 
-.img-wrapper p {
+.img-description,
+#slider1 {
   margin: 0 auto;
   text-align: center;
   font-size: 0.9em;
@@ -59,7 +60,8 @@ p {
   h1 {
     font-size: max(30px, 6vw);
   }
-  .img-wrapper p {
+  .img-description,
+  #slider1 {
     font-size: 0.9em;
   }
 }
