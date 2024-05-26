@@ -53,13 +53,17 @@
       </p>
 
       <!-- TODO: How to automatize 'for file in images/*.jpg; do cwebp "$file" -o "${file%.*}.webp"; done' ?-->
+      <!-- TODO: How to automatize 'for file in images/*.jpg; do magick "$file" -resize 35% "${file}_small.jpg"; done' -->
       <!-- TODO: Image CDN/fetch smaller one first? -->
       <!-- TODO: https://web.dev/articles/serve-images-webp -->
-      <!-- TODO: https://web.dev/articles/serve-images-with-correct-dimensions -->
-      <div>
-        <img src="../images/anfield.webp" />
-        <p class="img-description">Anfield v predzápasový večer</p>
-      </div>
+      <!-- TODO: Automate inserting images so you don't have to copy-paste -->
+      <picture>
+        <source srcset="../images/anfield_small.webp" type="image/webp" media="(max-width: 800px)">
+        <source srcset="../images/anfield_small.jpg" type="image/jpeg" media="(max-width: 800px)">
+        <source srcset="../images/anfield.webp" type="image/webp">
+        <img src="../images/anfield.jpg" alt="Anfield v predzápasový večer">
+      </picture>
+      <p class="img-description">Anfield v predzápasový večer</p>
 
       <p>
         At in tellus integer feugiat scelerisque varius. Non enim praesent elementum
@@ -101,14 +105,30 @@
       <!-- Swiper -->
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
+          <!-- TODO: Alt/Description should be in one place -->
           <div class="swiper-slide" data-description="Description for Expedia">
-            <img src="../images/expedia.webp" />
+            <picture>
+              <source srcset="../images/expedia_small.webp" type="image/webp" media="(max-width: 800px)">
+              <source srcset="../images/expedia_small.jpg" type="image/jpeg" media="(max-width: 800px)">
+              <source srcset="../images/expedia.webp" type="image/webp">
+              <img src="../images/expedia.jpg" alt="Description for Expedia">
+            </picture>
           </div>
           <div class="swiper-slide" data-description="Description for Houses">
-            <img src="../images/houses.webp" />
+            <picture>
+              <source srcset="../images/houses_small.webp" type="image/webp" media="(max-width: 800px)">
+              <source srcset="../images/houses_small.jpg" type="image/jpeg" media="(max-width: 800px)">
+              <source srcset="../images/houses.webp" type="image/webp">
+              <img src="../images/houses.jpg" alt="Description for Houses">
+            </picture>
           </div>
           <div class="swiper-slide" data-description="Description for Anfield">
-            <img src="../images/anfield.webp" />
+            <picture>
+              <source srcset="../images/anfield_small.webp" type="image/webp" media="(max-width: 800px)">
+              <source srcset="../images/anfield_small.jpg" type="image/jpeg" media="(max-width: 800px)">
+              <source srcset="../images/anfield.webp" type="image/webp">
+              <img src="../images/anfield.jpg" alt="Description for Anfield">
+            </picture>
           </div>
         </div>
         <div class="swiper-pagination"></div>
