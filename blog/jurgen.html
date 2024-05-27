@@ -55,7 +55,7 @@
       <!-- TODO: https://web.dev/articles/serve-images-webp -->
       <!-- TODO: Automate inserting images so you don't have to copy-paste -->
       <!-- TODO: Check lazysizes -->
-      <!-- TODO: Check why there was a white delay at first iteration through the gallery -->
+      <!-- TODO: Check why there is a white delay at first iteration through the gallery. -->
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <!-- TODO: Alt/Description should be in one place -->
@@ -68,13 +68,13 @@
           <div class="swiper-slide" data-description="Barbeque pred koncertom">
             <picture>
               <source srcset="../images/taggys-grilovacka_small.webp" media="(max-width: 800px)">
-              <img src="../images/taggys-grilovacka.webp" alt="Barbeque pred koncertom">
+              <img loading="lazy" src="../images/taggys-grilovacka.webp" alt="Barbeque pred koncertom">
             </picture>
           </div>
           <div class="swiper-slide" data-description="Koncert Jamieho Webstera v Taggy's">
             <picture>
               <source srcset="../images/webster_small.webp" media="(max-width: 800px)">
-              <img src="../images/webster.webp" alt="Koncert Jamieho Webstera v Taggy's">
+              <img loading="lazy" src="../images/webster.webp" alt="Koncert Jamieho Webstera v Taggy's">
             </picture>
           </div>
         </div>
@@ -119,13 +119,13 @@
           <div class="swiper-slide" data-description="Fanúšikovia na ceste ku štadiónu">
             <picture>
               <source srcset="../images/fans-on-the-way_small.webp" media="(max-width: 800px)">
-              <img src="../images/fans-on-the-way.webp" alt="Fanúšikovia na ceste ku štadiónu">
+              <img loading="lazy" src="../images/fans-on-the-way.webp" alt="Fanúšikovia na ceste ku štadiónu">
             </picture>
           </div>
           <div class="swiper-slide" data-description="Brána Boba Paisleyho, trénerskej legendy #LFC">
             <picture>
               <source srcset="../images/paisley-gateway_small.webp" media="(max-width: 800px)">
-              <img src="../images/paisley-gateway.webp" alt="Brána Boba Paisleyho, trénerskej legendy #LFC">
+              <img loading="lazy" src="../images/paisley-gateway.webp" alt="Brána Boba Paisleyho, trénerskej legendy #LFC">
             </picture>
           </div>
         </div>
@@ -164,13 +164,13 @@
           <div class="swiper-slide" data-description="Oh, Andy Andy!">
             <picture>
               <source srcset="../images/robbo_small.webp" media="(max-width: 800px)">
-              <img src="../images/robbo.webp" alt="Oh, Andy Andy!">
+              <img loading="lazy" src="../images/robbo.webp" alt="Oh, Andy Andy!">
             </picture>
           </div>
           <div class="swiper-slide" data-description="Až prekvapivo milý Stefan">
             <picture>
               <source srcset="../images/stefan_small.webp" media="(max-width: 800px)">
-              <img src="../images/stefan.webp" alt="Až prekvapivo milý Stefan">
+              <img loading="lazy" src="../images/stefan.webp" alt="Až prekvapivo milý Stefan">
             </picture>
           </div>
         </div>
@@ -287,22 +287,22 @@
         });
       });
 
-      // function preloadImage(imageUrl) {
-      //   const image = new Image();
-      //   image.src = imageUrl;
-      // }
+      function preloadImage(imageUrl) {
+        const image = new Image();
+        image.src = imageUrl;
+      }
 
-      // for (const swiper of swipers) {
-      //   const firstImage = swiper.querySelector('img');
+      for (const swiper of swipers) {
+        const firstImage = swiper.querySelector('img');
 
-      //   firstImage.addEventListener('load', () => {
-      //     const allImages = swiper.querySelectorAll('.swiper-wrapper img');
-      //     for (let i = 1; i < allImages.length; i++) {
-      //       const image = allImages[i];
-      //       preloadImage(image.src);
-      //     }
-      //   });
-      // }
+        firstImage.addEventListener('load', () => {
+          const allImages = swiper.querySelectorAll('.swiper-wrapper img');
+          for (let i = 1; i < allImages.length; i++) {
+            const image = allImages[i];
+            preloadImage(image.src);
+          }
+        });
+      }
     });
   </script>
   </body>
