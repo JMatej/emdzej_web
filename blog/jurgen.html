@@ -295,7 +295,7 @@
         const firstImage = swiper.querySelector('img');
 
         firstImage.addEventListener('load', () => {
-          const allImages = swiperWrapper.querySelectorAll('img');
+          const allImages = swiper.querySelectorAll('.swiper-wrapper img');
           for (let i = 1; i < allImages.length; i++) {
             const image = allImages[i];
             preloadImage(image.src);
