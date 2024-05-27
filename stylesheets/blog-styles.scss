@@ -78,6 +78,11 @@ a {
   outline: 1px solid white;
 }
 
+.portrait-gallery img {
+  width: 55%;
+  margin: 0 auto;
+}
+
 .img-description {
   margin: 0 auto;
   text-align: center;
@@ -87,11 +92,23 @@ a {
   font-style: italic;
 }
 
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.gallery img {
+    width: 49%;
+    height: auto;
+    display: block;
+}
+
 .not-analog {
   border-radius: 5px;
 }
 
-.footnote-ref {
+.footnote-ref, .return-ref {
   text-decoration: none;
 }
 
@@ -99,14 +116,14 @@ a {
 .footnotes {
   margin-top: 20px;
   font-size: 0.8em;
-}
 
-.footnotes li {
-  margin-bottom: 10px;
-}
+  li {
+    margin-bottom: 10px;
 
-.footnotes li p {
-  margin: 0;
+    p {
+      margin: 0;
+    }
+  }
 }
 
 footer {
@@ -140,6 +157,11 @@ footer {
   .swiper-pagination-bullet {
     height: 8px;
     width: 8px;
+  }
+
+  .portrait-gallery img {
+    width: 100%;
+    margin: 0 auto;
   }
 
   footer {
