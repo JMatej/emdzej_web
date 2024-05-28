@@ -78,11 +78,6 @@ a {
   outline: 1px solid white;
 }
 
-.portrait-gallery img {
-  width: 55%;
-  margin: 0 auto;
-}
-
 .img-description {
   margin: 0 auto;
   text-align: center;
@@ -90,18 +85,6 @@ a {
   font-size: 0.9em;
   font-weight: bold;
   font-style: italic;
-}
-
-.gallery {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-}
-
-.gallery img {
-    width: 49%;
-    height: auto;
-    display: block;
 }
 
 .not-analog {

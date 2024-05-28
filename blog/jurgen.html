@@ -13,7 +13,24 @@
     <link rel="stylesheet" href="../stylesheets/blog-styles.css" />
     <!-- TODO: Plausible -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <style type="text/css">
+      .swiper {
+/*        width: 100%;*/
+/*        padding-top: 10px;
+        padding-bottom: 50px;*/
+      }
 
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 50%;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
     <div class="content">
@@ -155,7 +172,7 @@
         Bibendum arcu vitae elementum curabitur.
       </p>
 
-      <div class="swiper mySwiper portrait-gallery">
+      <div class="swiper mySwiperiq portrait-gallery">
         <div class="swiper-wrapper">
           <!-- TODO: Alt/Description should be in one place -->
           <div class="swiper-slide" data-description="Tesne pred gólom, ktorý nepadol">
@@ -176,17 +193,17 @@
               <img loading="lazy" src="../images/stefan.webp" alt="Až prekvapivo milý Stefan">
             </picture>
           </div>
+          <!-- TODO: ynwa/Homebaked? Krajsia fotka, ale mozno sa nehodi -->
+          <div class="swiper-slide" data-description="V Homebaked pred zápasom">
+            <picture>
+              <source srcset="../images/homebaked_small.webp" media="(max-width: 800px)">
+              <img loading="lazy" src="../images/homebaked.webp" alt="V Homebaked pred zápasom">
+            </picture>
+          </div>
         </div>
         <div class="swiper-pagination"></div>
       </div>
-      <p class="img-description slider3-description"></p>
-
-      <!-- IDEA: Use swiper cards -->
-      <!-- <div class="gallery">
-        <img loading="lazy" src="../images/match.jpg" alt="TODO">
-        <img loading="lazy" src="../images/robbo.jpg" alt="TODO">
-        <img loading="lazy" src="../images/stefan.jpg" alt="TODO">
-      </div> -->
+      <p id="slider3-description" class="img-description"></p>
 
       <p>
         At in tellus integer feugiat scelerisque varius. Non enim praesent elementum
@@ -268,6 +285,37 @@
 
   <script defer>
     document.addEventListener("DOMContentLoaded", function() {
+
+      // TODO: Copypasta, spravit vseobecnejsie
+      // TODO: ak je width pod 800, tak namiesto coverflow sprav basic
+      const swiper = new Swiper('.mySwiperiq', {
+        effect: "coverflow",
+        // TODO: Fix missing rightmost image when infinite loop. This can be fixed by adding 4th image in the gallery.
+        loop: true,
+        centeredSlides: true,
+        initialSlide: 1,
+        keyboard: {
+          enabled: true,
+        },
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 10,
+          depth: 10,
+          slideShadows: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        on: {
+            slideChange: function () {
+              var activeSlide = this.slides[this.activeIndex];
+              var description = activeSlide.dataset.description;
+              document.querySelector("#slider3-description").textContent = description;
+            },
+          },
+      });
+
       var swipers = document.querySelectorAll(".mySwiper");
 
       swipers.forEach(function(swiper, index) {
@@ -292,7 +340,6 @@
         });
       });
 
-      // TODO: Does not work with _small suffixes
       function preloadImage(imageUrl) {
         const image = new Image();
         image.src = imageUrl;
