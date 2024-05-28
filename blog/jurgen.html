@@ -14,12 +14,6 @@
     <!-- TODO: Plausible -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <style type="text/css">
-      .swiper {
-/*        width: 100%;*/
-/*        padding-top: 10px;
-        padding-bottom: 50px;*/
-      }
-
       .swiper-slide {
         background-position: center;
         background-size: cover;
@@ -73,6 +67,7 @@
       <!-- TODO: Automate inserting images so you don't have to copy-paste -->
       <!-- TODO: Check lazysizes -->
       <!-- TODO: Check why there is a white delay at first iteration through the gallery. -->
+      <!-- TODO: why the fck sa naloaduje grilovacka hned na zaciatku -_-  -->
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <!-- TODO: Alt/Description should be in one place -->
@@ -97,7 +92,7 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
-      <p class="img-description slider1-description"></p>
+      <p id="slider1-description" class="img-description"></p>
 
       <!-- Checknut bigramy, trigramy -->
       <p>
@@ -151,7 +146,7 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
-      <p class="img-description slider2-description"></p>
+      <p id="slider2-description" class="img-description"></p>
 
       <p>
         Hodinu pred začiatkom zápasu sme sa vybrali priamo na naše miesta. Lístok som mal na slávnu tribúnu The Kop. Ku môjmu miestu viedli najužšie turnikety, aké som kedy videl. Malo to však výhodu a to tú, že sa mi, skinny chlapcovi, konečne splnil sen, že sa raz nezmestím na šírku do vchodu. Na sedačkách sme už mali nachystané papiere, ktoré boli súčasťou mozaiky: “Danke Jürgen, YNWA”. Ja som sedel hneď vedľa písmena Y. Ešte bolo 10-15 minút do rozcvičky, ktorú si vždy rád pozriem, tak som sa vydal poprechádzať po tribúne, kým sa mi neprihovoril vlajkár a neponúkol mi odfotiť sa s jeho vlajkou “Scouse Power”. Následne rozcvička, bufet, nejaké small talk-y až prišlo k vyhlasovaniu zostáv a predzápasovej hymne. To bol prvý moment, kedy som mal slzy na krajíčku a určite sa nebudem tváriť, že som to nečakal. Bola to jedna z najsilnejších chvíľ a z pozápasových rozhovorov s ostatnými fanúšikmi som zistil, že to práve počas hymny doľahlo na viacerých z nás. Nálada sa však rázom úplne zmenila, keď sa začal zápas. Na plné obrátky sa rozbehlo spievanie a skandovanie, pričom sa dostalo aj na, mnou nečakané, popevky na hráčov ako <a href="https://youtu.be/s4nEuu-OzZo" target="_blank" rel="noopener noreferrer">Sadio Mané</a>, <a href="https://youtu.be/ZWZGDfSZmUs" target="_blank" rel="noopener noreferrer">Gini Wijnaldum</a> či <a href="https://youtu.be/YggTZaFffBc" target="_blank" rel="noopener noreferrer">Divock Origi</a>, prípadne ten o <a href="https://youtu.be/ayivhplxuwM" target="_blank" rel="noopener noreferrer">zálohe z roku 2007</a>. Spievalo sa hlasno a spievalo sa stále. Ďaleko najlepšia atmosféra, akú som na Anfielde zažil. Za seba musím povedať, že som si vykričal hlas a podal nadpriemerný výkon. Niektorí z fanúšikov by si mohli brať príklad, ale o tom niekedy nabudúce. Zápas sa síce hral, ale bolo ľahké si to nevšimnúť, pretože v ňom aj tak už o nič nešlo a celý štadión si svojim hlasným spievaním uvedomoval, že sa jedná o posledné dve hodiny Kloppa na lavičke nášho milovaného klubu. Napriek tomu sa polčas odohral v dobrom tempe, dali sme dva góly a „vlci“ išli do kabíny v desiatich. Situáciu s červenou kartou som poriadne nevidel, ale riešilo sa to cez VAR. Keď človek pozerá futbal v telke, tak si nedokáže naplno uvedomiť, ako dlho trvajú ~2 minúty na štadióne, kde nie je žiadny komentár a aj informáciu, že sa situácia preveruje cez VAR, sa ľudia prítomní na štadióne dozvedia s oneskorením.
@@ -172,7 +167,7 @@
         Bibendum arcu vitae elementum curabitur.
       </p>
 
-      <div class="swiper mySwiperiq portrait-gallery">
+      <div class="swiper mySwiper portrait-gallery">
         <div class="swiper-wrapper">
           <!-- TODO: Alt/Description should be in one place -->
           <div class="swiper-slide" data-description="Tesne pred gólom, ktorý nepadol">
@@ -187,17 +182,17 @@
               <img loading="lazy" src="../images/robbo.webp" alt="Oh, Andy Andy!">
             </picture>
           </div>
+          <!-- TODO: danke/ynwa/Homebaked? Krajsia fotka, ale mozno sa nehodi? Miesat neanalogy? -->
+          <div class="swiper-slide" data-description="Mozaika 'Danke Jürgen, YNWA'">
+            <picture>
+              <source srcset="../images/mozaika_small.webp" media="(max-width: 800px)">
+              <img loading="lazy" src="../images/mozaika.webp" class="not-analog" alt="V Homebaked pred zápasom">
+            </picture>
+          </div>
           <div class="swiper-slide" data-description="Až prekvapivo milý Stefan">
             <picture>
               <source srcset="../images/stefan_small.webp" media="(max-width: 800px)">
               <img loading="lazy" src="../images/stefan.webp" alt="Až prekvapivo milý Stefan">
-            </picture>
-          </div>
-          <!-- TODO: ynwa/Homebaked? Krajsia fotka, ale mozno sa nehodi -->
-          <div class="swiper-slide" data-description="V Homebaked pred zápasom">
-            <picture>
-              <source srcset="../images/homebaked_small.webp" media="(max-width: 800px)">
-              <img loading="lazy" src="../images/homebaked.webp" alt="V Homebaked pred zápasom">
             </picture>
           </div>
         </div>
@@ -285,44 +280,15 @@
 
   <script defer>
     document.addEventListener("DOMContentLoaded", function() {
-
-      // TODO: Copypasta, spravit vseobecnejsie
-      // TODO: ak je width pod 800, tak namiesto coverflow sprav basic
-      const swiper = new Swiper('.mySwiperiq', {
-        effect: "coverflow",
-        // TODO: Fix missing rightmost image when infinite loop. This can be fixed by adding 4th image in the gallery.
-        loop: true,
-        centeredSlides: true,
-        // TODO: Ak chces zmenit initialSlide, musis to zmenit aj v logike preloadovania image-ov
-        // initialSlide: 1,
-        keyboard: {
-          enabled: true,
-        },
-        slidesPerView: "auto",
-        coverflowEffect: {
-          rotate: 10,
-          depth: 10,
-          slideShadows: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        on: {
-            slideChange: function () {
-              var activeSlide = this.slides[this.activeIndex];
-              var description = activeSlide.dataset.description;
-              document.querySelector("#slider3-description").textContent = description;
-            },
-          },
-      });
+      function isViewportSmall() {
+        return window.innerWidth <= 800;
+      }
 
       var swipers = document.querySelectorAll(".mySwiper");
 
       swipers.forEach(function(swiper, index) {
-        var descriptionClass = ".slider" + (index + 1) + "-description";
-
-        new Swiper(swiper, {
+        var descriptionID = "#slider" + (index + 1) + "-description";
+        var swiperOptions = {
           loop: true,
           keyboard: {
             enabled: true,
@@ -335,10 +301,29 @@
             slideChange: function () {
               var activeSlide = this.slides[this.activeIndex];
               var description = activeSlide.dataset.description;
-              document.querySelector(descriptionClass).textContent = description;
+              document.querySelector(descriptionID).textContent = description;
             },
           },
-        });
+        };
+
+        // TODO: Fix missing rightmost image when infinite loop. This can be fixed by adding 4th image in the gallery.
+        // TODO: Ked padne pod 800 sirka, tak sa ma spustit toto. Inac pri resizovani z vacsieho do mensieho zostava povodny
+        if (swiper.classList.contains('portrait-gallery') && !isViewportSmall()) {
+          Object.assign(swiperOptions, {
+            effect: "coverflow",
+            centeredSlides: true,
+            // TODO: Ak chces zmenit initialSlide, musis to zmenit aj v logike preloadovania image-ov
+            // initialSlide: 1,
+            slidesPerView: "auto",
+            coverflowEffect: {
+              rotate: 10,
+              depth: 20,
+              slideShadows: false,
+            }
+          });
+        }
+
+        new Swiper(swiper, swiperOptions);
       });
 
       function preloadImage(imageUrl) {
@@ -351,10 +336,6 @@
           return baseImageUrl.replace('.webp', '_small.webp');
         }
         return baseImageUrl;
-      }
-
-      function isViewportSmall() {
-        return window.innerWidth <= 800;
       }
 
       for (const swiper of swipers) {
