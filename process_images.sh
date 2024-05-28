@@ -3,7 +3,7 @@ for file in images/*.jpg; do
     webp_file="${file%.*}.webp"
     if [ ! -f "$webp_file" ]; then
         echo "Converting $file to $webp_file..."
-        cwebp "$file" -o "$webp_file"
+        cwebp "$file" -q 50 -o "$webp_file"
     fi
 done
 
