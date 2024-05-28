@@ -74,6 +74,7 @@
       <!-- TODO: Check lazysizes -->
       <!-- TODO: Check why there is a white delay at first iteration through the gallery. -->
       <!-- TODO: why the fck sa naloaduje grilovacka hned na zaciatku -_-  -->
+      <!-- + ked je cisty laoding na zvysnych okrem anfieldu, tak preco ich lazy-loadne??? -->
       <!-- TODO: Webster sa preloadne a potom sa fetchne znova. co sa dovtedy vyhodilo z cache?  -->
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
@@ -361,6 +362,20 @@
       //     }
       //   });
       // }
+
+      for (const swiper of swipers) {
+        const firstImage = swiper.querySelector('img');
+
+        firstImage.addEventListener('load', () => {
+          const allImages = swiper.querySelectorAll('.swiper-wrapper img');
+          for (let i = 1; i < allImages.length; i++) {
+            const imgElement = allImages[i];
+            console.log('imgElement before', imgElement);
+            imgElement.setAttribute('loading', 'eager');
+            console.log('imgElement after', imgElement);
+          }
+        });
+      }
     });
   </script>
   </body>
