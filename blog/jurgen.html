@@ -10,6 +10,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <!-- TODO: What is faster? Load fonts from google or locally? -->
+<!--     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet"> -->
+
     <link rel="stylesheet" href="../stylesheets/blog-styles.css" />
     <!-- TODO: Plausible -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
@@ -68,6 +73,7 @@
       <!-- TODO: Check lazysizes -->
       <!-- TODO: Check why there is a white delay at first iteration through the gallery. -->
       <!-- TODO: why the fck sa naloaduje grilovacka hned na zaciatku -_-  -->
+      <!-- TODO: Webster sa preloadne a potom sa fetchne znova. co sa dovtedy vyhodilo z cache?  -->
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <!-- TODO: Alt/Description should be in one place -->

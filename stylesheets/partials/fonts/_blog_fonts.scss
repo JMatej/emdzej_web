@@ -1,10 +1,10 @@
-// Do not forget that the path should be relative to the .css file
+/*// Do not forget that the path should be relative to the .css file*/
 
-// TODO: tff -> woff2 https://www.fontsquirrel.com/tools/webfont-generator (vynechalo č prvy raz)
+/*TODO: tff -> woff2 https://www.fontsquirrel.com/tools/webfont-generator (vynechalo č prvy raz)*/
 
 @font-face {
-  font-family: 'EB Garamond';
-  src: url('../fonts/EBGaramond-VariableFont_wght.ttf') format('truetype');
+  font-family: 'EB Garamond X';
+  src: url('../fonts/EBGaramond3.woff2') format('woff2');
   font-display: swap;
 }
 
