@@ -2,13 +2,13 @@
 /*// Do not forget that the path should be relative to the .css file*/
 /*TODO: tff -> woff2 https://www.fontsquirrel.com/tools/webfont-generator (vynechalo č prvy raz)*/
 @font-face {
-  font-family: "EB Garamond X";
-  src: url("../fonts/EBGaramond3.woff2") format("woff2");
+  font-family: "EB Garamond";
+  src: url("../fonts/EBGaramond.woff2") format("woff2"), url("../fonts/EBGaramond.woff") format("woff"), url("../fonts/EBGaramond.ttf") format("truetype");
   font-display: swap;
 }
 @font-face {
   font-family: "Abril Fatface";
-  src: url("../fonts/AbrilFatface-Regular.ttf") format("truetype");
+  src: url("../fonts/AbrilFatface.woff2") format("woff2"), url("../fonts/AbrilFatface.woff") format("woff"), url("../fonts/AbrilFatface.ttf") format("truetype");
   font-display: swap;
 }
 /** {
@@ -20,7 +20,7 @@ body {
   margin: 0 auto;
   text-align: center;
   color: #1a1a1a;
-  font-family: "EB Garamond X", serif;
+  font-family: "EB Garamond", serif;
   font-weight: 400;
   font-optical-sizing: auto;
   font-style: normal;
