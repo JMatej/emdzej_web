@@ -135,12 +135,14 @@
             <picture>
               <source srcset="../images/prematch-bus-1_small.webp" media="(max-width: 800px)">
               <img loading="lazy" src="../images/prematch-bus-1.webp" alt="Príchod tímového autobusu pred zápasom">
+              <div class="swiper-lazy-preloader"></div>
             </picture>
           </div>
           <div class="swiper-slide" data-description="Fanúšikovia na ceste ku štadiónu">
             <picture>
               <source srcset="../images/fans-on-the-way_small.webp" media="(max-width: 800px)">
               <img loading="lazy" src="../images/fans-on-the-way.webp" alt="Fanúšikovia na ceste ku štadiónu">
+              <div class="swiper-lazy-preloader"></div>
             </picture>
           </div>
           <div class="swiper-slide" data-description="Brána Boba Paisleyho, trénerskej legendy #LFC">
@@ -148,6 +150,7 @@
               <!-- TODO: Fixnut, nech sa nemeni height na mobiloch, ak je text dlhy -->
               <source srcset="../images/paisley-gateway_small.webp" media="(max-width: 800px)">
               <img loading="lazy" src="../images/paisley-gateway.webp" alt="Brána Boba Paisleyho, trénerskej legendy #LFC">
+              <div class="swiper-lazy-preloader"></div>
             </picture>
           </div>
         </div>
@@ -297,6 +300,8 @@
         var descriptionID = "#slider" + (index + 1) + "-description";
         var swiperOptions = {
           loop: true,
+          lazy: true,
+          // lazyPreloadPrevNext: 3,
           keyboard: {
             enabled: true,
           },
@@ -333,33 +338,33 @@
         new Swiper(swiper, swiperOptions);
       });
 
-      function preloadImage(imageUrl) {
-        const image = new Image();
-        image.src = imageUrl;
-      }
+      // function preloadImage(imageUrl) {
+      //   const image = new Image();
+      //   image.src = imageUrl;
+      // }
 
-      function getCorrectImageUrl(baseImageUrl, isSmall) {
-        if (isSmall) {
-          return baseImageUrl.replace('.webp', '_small.webp');
-        }
-        return baseImageUrl;
-      }
+      // function getCorrectImageUrl(baseImageUrl, isSmall) {
+      //   if (isSmall) {
+      //     return baseImageUrl.replace('.webp', '_small.webp');
+      //   }
+      //   return baseImageUrl;
+      // }
 
-      for (const swiper of swipers) {
-        const firstImage = swiper.querySelector('img');
+      // for (const swiper of swipers) {
+      //   const firstImage = swiper.querySelector('img');
 
-        firstImage.addEventListener('load', () => {
-          const allImages = swiper.querySelectorAll('.swiper-wrapper img');
-          const isSmall = isViewportSmall();
+      //   firstImage.addEventListener('load', () => {
+      //     const allImages = swiper.querySelectorAll('.swiper-wrapper img');
+      //     const isSmall = isViewportSmall();
 
-          for (let i = 1; i < allImages.length; i++) {
-            const imgElement = allImages[i];
-            const baseImageUrl = imgElement.src;
-            const correctImageUrl = getCorrectImageUrl(baseImageUrl, isSmall);
-            preloadImage(correctImageUrl);
-          }
-        });
-      }
+      //     for (let i = 1; i < allImages.length; i++) {
+      //       const imgElement = allImages[i];
+      //       const baseImageUrl = imgElement.src;
+      //       const correctImageUrl = getCorrectImageUrl(baseImageUrl, isSmall);
+      //       preloadImage(correctImageUrl);
+      //     }
+      //   });
+      // }
     });
   </script>
   </body>
