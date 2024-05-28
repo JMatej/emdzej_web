@@ -85,13 +85,13 @@
           <div class="swiper-slide" data-description="Barbeque pred koncertom">
             <picture>
               <source srcset="../images/taggys-grilovacka_small.webp" media="(max-width: 800px)">
-              <img src="../images/taggys-grilovacka.webp" alt="Barbeque pred koncertom">
+              <img loading="lazy" src="../images/taggys-grilovacka.webp" alt="Barbeque pred koncertom">
             </picture>
           </div>
           <div class="swiper-slide" data-description="Koncert Jamieho Webstera v Taggy's">
             <picture>
               <source srcset="../images/webster_small.webp" media="(max-width: 800px)">
-              <img src="../images/webster.webp" alt="Koncert Jamieho Webstera v Taggy's">
+              <img loading="lazy" src="../images/webster.webp" alt="Koncert Jamieho Webstera v Taggy's">
             </picture>
           </div>
         </div>
@@ -293,7 +293,8 @@
         // TODO: Fix missing rightmost image when infinite loop. This can be fixed by adding 4th image in the gallery.
         loop: true,
         centeredSlides: true,
-        initialSlide: 1,
+        // TODO: Ak chces zmenit initialSlide, musis to zmenit aj v logike preloadovania image-ov
+        // initialSlide: 1,
         keyboard: {
           enabled: true,
         },
