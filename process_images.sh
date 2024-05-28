@@ -8,10 +8,10 @@ for file in images/*.jpg; do
 done
 
 # Resize images to 35%, creating a _small version if it doesn't already exist
-for file in images/*.{jpg,webp}; do
-    if [[ "$file" != *_small.jpg && "$file" != *_small.webp && ! -f "${file%.*}_small.${file##*.}" ]]; then
+for file in images/*.webp; do
+    if [[ "$file" != *_small.webp && ! -f "${file%.*}_small.webp" ]]; then
         echo "Converting $file to small version..."
-        magick "$file" -resize 35% "${file%.*}_small.${file##*.}"
+        magick "$file" -resize 35% "${file%.*}_small.webp"
     fi
 done
 
