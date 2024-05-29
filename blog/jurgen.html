@@ -369,7 +369,7 @@
 
         firstImage.addEventListener('load', () => {
           console.log('zavolal som sa', firstImage);
-          const allImages = swiper.querySelectorAll('.swiper-wrapper');
+          const allImages = swiper.querySelectorAll('.swiper-wrapper img');
           for (let i = 1; i < allImages.length; i++) {
             const imgElement = allImages[i];
             console.log('imgElement before', imgElement);
