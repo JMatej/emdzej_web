@@ -83,7 +83,7 @@
           <div class="swiper-slide" data-description="Anfield v predvečer zápasu">
             <picture>
               <source srcset="../images/anfield_small.webp" media="(max-width: 800px)">
-              <img loading="lazy" src="../images/anfield.webp" alt="Anfield v predvečer zápasu">
+              <img class="first-swiper-image" loading="lazy" src="../images/anfield.webp" alt="Anfield v predvečer zápasu">
             </picture>
           </div>
           <div class="swiper-slide" data-description="Barbeque pred koncertom">
@@ -136,7 +136,7 @@
           <div class="swiper-slide" data-description="Príchod tímového autobusu pred zápasom">
             <picture>
               <source srcset="../images/prematch-bus-1_small.webp" media="(max-width: 800px)">
-              <img loading="lazy" src="../images/prematch-bus-1.webp" alt="Príchod tímového autobusu pred zápasom">
+              <img class="first-swiper-image" loading="lazy" src="../images/prematch-bus-1.webp" alt="Príchod tímového autobusu pred zápasom">
             </picture>
           </div>
           <div class="swiper-slide" data-description="Fanúšikovia na ceste ku štadiónu">
@@ -182,7 +182,7 @@
           <div class="swiper-slide" data-description="Tesne pred gólom, ktorý nepadol">
             <picture>
               <source srcset="../images/match_small.webp" media="(max-width: 800px)">
-              <img loading="lazy" src="../images/match.webp" alt="Tesne pred gólom, ktorý nepadol">
+              <img class="first-swiper-image" loading="lazy" src="../images/match.webp" alt="Tesne pred gólom, ktorý nepadol">
             </picture>
           </div>
           <div class="swiper-slide" data-description="Oh, Andy Andy!">
@@ -195,7 +195,7 @@
           <div class="swiper-slide" data-description="Mozaika 'Danke Jürgen, YNWA'">
             <picture>
               <source srcset="../images/mozaika_small.webp" media="(max-width: 800px)">
-              <img loading="lazy" src="../images/mozaika.webp" class="not-analog" alt="V Homebaked pred zápasom">
+              <img class="not-analog" loading="lazy" src="../images/mozaika.webp" alt="Mozaika 'Danke Jürgen, YNWA'">
             </picture>
           </div>
           <div class="swiper-slide" data-description="Až prekvapivo milý Stefan">
@@ -365,11 +365,11 @@
       // }
 
       for (const swiper of swipers) {
-        const firstImage = swiper.querySelector('img');
+        const firstImage = swiper.querySelector('.first-swiper-image');
 
         firstImage.addEventListener('load', () => {
           console.log('zavolal som sa', firstImage);
-          const allImages = swiper.querySelectorAll('.swiper-wrapper img');
+          const allImages = swiper.querySelectorAll('.swiper-wrapper');
           for (let i = 1; i < allImages.length; i++) {
             const imgElement = allImages[i];
             console.log('imgElement before', imgElement);
