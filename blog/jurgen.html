@@ -25,11 +25,6 @@
         background-size: cover;
         width: 50%;
       }
-
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-      }
     </style>
   </head>
   <body>
@@ -326,8 +321,8 @@
             // initialSlide: 1,
             slidesPerView: "auto",
             coverflowEffect: {
-              rotate: 10,
-              depth: 20,
+              rotate: 15,
+              // depth: 20,
               slideShadows: false,
             }
           });
@@ -335,34 +330,6 @@
 
         new Swiper(swiper, swiperOptions);
       });
-
-      // function preloadImage(imageUrl) {
-      //   const image = new Image();
-      //   image.src = imageUrl;
-      // }
-
-      // function getCorrectImageUrl(baseImageUrl, isSmall) {
-      //   if (isSmall) {
-      //     return baseImageUrl.replace('.webp', '_small.webp');
-      //   }
-      //   return baseImageUrl;
-      // }
-
-      // for (const swiper of swipers) {
-      //   const firstImage = swiper.querySelector('img');
-
-      //   firstImage.addEventListener('load', () => {
-      //     const allImages = swiper.querySelectorAll('.swiper-wrapper img');
-      //     const isSmall = isViewportSmall();
-
-      //     for (let i = 1; i < allImages.length; i++) {
-      //       const imgElement = allImages[i];
-      //       const baseImageUrl = imgElement.src;
-      //       const correctImageUrl = getCorrectImageUrl(baseImageUrl, isSmall);
-      //       preloadImage(correctImageUrl);
-      //     }
-      //   });
-      // }
 
       for (const swiper of swipers) {
         const firstImage = swiper.querySelector('.first-swiper-image');
