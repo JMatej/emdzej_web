@@ -128,7 +128,16 @@ a {
   }
 }
 
+.cc-image {
+  height: 22px;
+  margin-left: 3px;
+  vertical-align: text-bottom;
+  width: auto;
+}
+
 footer {
+  margin-top: 30px;
+  margin-bottom: 20px;
   hr {
     margin: 10px 0;
     height: 1px;
@@ -137,8 +146,22 @@ footer {
     background-color: vars.$black-text;
   }
 
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .left {
+    text-align: left;
+  }
+  .right {
+    text-align: right;
+  }
+
   p {
     font-size: 1em;
+    margin: 0;
   }
 }
 
@@ -167,14 +190,26 @@ footer {
   }
 
   footer {
+    max-width: 90%;
+    margin: 15px auto;
+
     hr {
-      margin: auto;
-      margin-top: 15px;
       height: 1px;
       border: none;
       border-radius: 50%;
       background-color: black;
-      max-width: 90%;
+    }
+
+    .footer-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .left, .right {
+      text-align: center;
+      width: 100%;
+    }
+    .right {
+      margin-top: 10px; /* Adjust margin as needed */
     }
   }
 

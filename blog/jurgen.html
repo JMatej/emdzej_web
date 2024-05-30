@@ -82,10 +82,8 @@
       <p id="slider1-description" class="img-description"></p>
       <!-- Checknut bigramy, trigramy -->
       <p>
-        <strong>Deň D.</strong> Zápas sa hral o 16:00 lokálneho času a keďže som chcel navnímať atmosféru a ruch v okolí štadióna skôr, rozhodol som sa, že pôjdem dostatočne vopred, medzi 12-13h. Počasie vyšlo dokonale, <a href="https://www.instagram.com/kvalitnyslang/p/Cv7y4QaqrCy/" target="_blank" rel="noopener noreferrer">oskar</a> pražil, obloha ľaliovo čistá - v máji prekvapí viac už len to, keď je rovnako teplo na Orave a môže sa, aj keď len na pár týždňov, vypnúť kúrenie. Pár dní predtým som si hovoril, že by nič nevystihlo Kloppovu kariéru smoliara lepšie, ako keby počas celého zápasu pršalo, bolo by „príjemnych“ 15 stupňov a celá rozlúčka by sa zliala (pun intended) do jedného rýchleho ďakovného kolečka po štadióne. Naštastie však hviezdy, osud a horoskopy stáli na Jürgenovej strane. Ku Anfieldu som sa vydal po vlastných, <a href="https://organicmaps.app/" target="_blank" rel="noopener noreferrer">mapy</a> mi písali krásnych 50 minút od „ <a href="https://maps.app.goo.gl/ZSMJqZnD5iasRc9D8" target="_blank" rel="noopener noreferrer">obličky</a>“, vedľa ktorej som býval. Po pár minútach chôdze som už nepotreboval pozerať správnu trasu, stačilo nasledovať ostatné červené dresy, ktorých každým metrom pribúdalo. V jednom momente dal dole okienko na aute chlapík, aby mohol na plnú hubu zakričať: „C'mon Wolves <a id="fn-wolves-ref" href="#fn-wolves" class="footnote-ref">
-          <sup>X</sup>
-        </a>! F*ck off, Scousers <a id="fn-scousers-ref" href="#fn-scousers" class="footnote-ref">
-          <sup>X</sup>
+        <strong>Deň D.</strong> Zápas sa hral o 16:00 lokálneho času a keďže som chcel navnímať atmosféru a ruch v okolí štadióna skôr, rozhodol som sa, že pôjdem dostatočne vopred, medzi 12-13h. Počasie vyšlo dokonale, <a href="https://www.instagram.com/kvalitnyslang/p/Cv7y4QaqrCy/" target="_blank" rel="noopener noreferrer">oskar</a> pražil, obloha ľaliovo čistá - v máji prekvapí viac už len to, keď je rovnako teplo na Orave a môže sa, aj keď len na pár týždňov, vypnúť kúrenie. Ešte týždeň dozadu som si hovoril, že by nič nevystihlo Kloppovu kariéru smoliara lepšie, ako keby počas celého zápasu pršalo, bolo by „príjemnych“ 15 stupňov a celá rozlúčka by sa zliala (pun intended) do jedného rýchleho ďakovného kolečka po štadióne. Naštastie však hviezdy, osud a horoskopy stáli na Jürgenovej strane. Ku Anfieldu som sa vydal po vlastných, <a href="https://organicmaps.app/" target="_blank" rel="noopener noreferrer">mapy</a> mi písali krásnych 50 minút od „<a href="https://maps.app.goo.gl/ZSMJqZnD5iasRc9D8" target="_blank" rel="noopener noreferrer">obličky</a>“, vedľa ktorej som býval. Po pár minútach chôdze som už nepotreboval pozerať správnu trasu, stačilo nasledovať ostatné červené dresy, ktorých každým metrom pribúdalo. V jednom momente dal dole okienko na aute chlapík, aby mohol na plnú hubu zakričať: „C'mon Wolves <a id="fn-wolves-ref" href="#fn-wolves" class="footnote-ref"><sup>X</sup>
+        </a>! F*ck off, Scousers <a id="fn-scousers-ref" href="#fn-scousers" class="footnote-ref"><sup>X</sup>
         </a>!!“ „F*ck you, <a href="https://dictionary.cambridge.org/dictionary/english/wanker" target="_blank" rel="noopener noreferrer">wanker</a>!“ zo mňa naštastie nevypadlo a na oplátku som mu tak venoval iba milý úsmev.
       </p>
       <!-- Wanker ako footnote? -->
@@ -249,8 +247,20 @@
     </div>
     <footer>
       <hr>
-      <p>Autor: <a href="/index.html">Matej Jurčák</a>
-      </p>
+      <div class="footer-content">
+        <p class="left">
+          Autor: <a href="/index.html">Matej Jurčák</a>
+        </p>
+        <p class="right">
+          Pod licenciou
+          <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">
+            CC BY-SA 4.0
+          </a>
+          <img class="cc-image" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+          <img class="cc-image" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+          <img class="cc-image" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="">
+        </p>
+      </div>
     </footer>
     <!-- TODO: Footnotes + go back to the place -->
     <!-- smoliara -->
@@ -304,16 +314,16 @@
         for (const swiper of swipers) {
           const firstImage = swiper.querySelector('.first-swiper-image');
           firstImage.addEventListener('load', () => {
-            console.log('zavolal som sa', firstImage);
+            // console.log('zavolal som sa', firstImage);
             const allImages = swiper.querySelectorAll('.swiper-wrapper img');
             for (let i = 0; i < allImages.length; i++) {
               const imgElement = allImages[i];
               if (firstImage.alt == imgElement.alt) {
                 continue;
               }
-              console.log('imgElement before', imgElement);
+              // console.log('imgElement before', imgElement);
               imgElement.setAttribute('loading', 'eager');
-              console.log('imgElement after', imgElement);
+              // console.log('imgElement after', imgElement);
             }
           });
         }
