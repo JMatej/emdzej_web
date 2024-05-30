@@ -46,6 +46,7 @@ h1 {
 
 img {
   width: 100%;
+  /* TODO: aspect-ratio */
 }
 
 p {
