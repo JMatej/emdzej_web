@@ -44,6 +44,14 @@ img {
 /* TODO: aspect-ratio */
 }
 
+.landscape-gallery img {
+  aspect-ratio: 3188 / 2137;
+}
+
+.portrait-gallery img {
+  aspect-ratio: 2137 / 3188;
+}
+
 p {
   max-width: 90%;
   margin: 15px auto;
