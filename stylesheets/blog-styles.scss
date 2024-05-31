@@ -97,6 +97,10 @@ a {
   }
 }
 
+.two-images-swiper {
+  display: none;
+}
+
 .img-description {
   margin: 0 auto;
   text-align: center;
@@ -165,6 +169,18 @@ footer {
   }
 }
 
+.two-images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.two-images img {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
 @media (max-width: 820px) {
   body {
     width: 100%;
@@ -187,6 +203,14 @@ footer {
   .portrait-gallery img {
     width: 100%;
     margin: 0 auto;
+  }
+
+  .two-images-swiper {
+    display: block;
+  }
+
+  .two-images-raw {
+    display: none;
   }
 
   footer {
