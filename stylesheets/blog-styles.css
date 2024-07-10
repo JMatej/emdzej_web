@@ -1,0 +1,290 @@
+@charset "UTF-8";
+/*// Do not forget that the path should be relative to the .css file*/
+/*TODO: tff -> woff2 https://www.fontsquirrel.com/tools/webfont-generator (vynechalo č prvy raz)*/
+@font-face {
+  font-family: "EB Garamond";
+  src: url("../fonts/EBGaramond.woff2") format("woff2"), url("../fonts/EBGaramond.woff") format("woff"), url("../fonts/EBGaramond.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Abril Fatface";
+  src: url("../fonts/AbrilFatface.woff2") format("woff2"), url("../fonts/AbrilFatface.woff") format("woff"), url("../fonts/AbrilFatface.ttf") format("truetype");
+  font-display: swap;
+}
+/* TODO: https://swiperjs.com/swiper-api#scss-styles */
+/** {
+  outline: 1px red solid;
+}*/
+body {
+  background-color: #FCFCFB;
+  width: 820px;
+  margin: 0 auto;
+  text-align: center;
+  color: #1a1a1a;
+  font-family: "EB Garamond", serif;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1.1em;
+}
+
+.content {
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 25px auto 0px;
+  font-family: "Abril Fatface", serif;
+  font-size: 3em;
+}
+
+h3 {
+  font-family: "Abril Fatface", serif;
+  font-size: 1.8em;
+}
+
+.button-thread {
+  background-color: #f4e5e1;
+  font-family: "EB Garamond", serif;
+  font-size: 0.9em;
+  border-radius: 4px;
+  border: 1px solid #c68b79;
+  box-shadow: rgba(255, 255, 255, 0.7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #9e4838;
+  cursor: pointer;
+  margin: 0;
+  padding: 2px 5px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-thread:hover,
+.button-thread:focus {
+  background-color: #eac2b2;
+  color: #77382c;
+}
+
+.button-thread:active {
+  background-color: #e2ae9e;
+  box-shadow: none;
+  color: #77382c;
+}
+
+.headline .meta-info p {
+  text-align: center;
+  font-size: 0.8em;
+  margin: 5px auto 0;
+}
+
+img {
+  width: 100%;
+  /* TODO: aspect-ratio */
+}
+
+p {
+  max-width: 90%;
+  margin: 15px auto;
+  text-align: justify;
+}
+
+a {
+  color: inherit;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+  background-color: white;
+  outline: 1px solid #c8102E;
+  opacity: 1;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #c8102E;
+  outline: 1px solid white;
+}
+
+.landscape-gallery img {
+  aspect-ratio: 3188/2137;
+}
+
+.portrait-gallery img {
+  aspect-ratio: 2137/3188;
+}
+.portrait-gallery .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+}
+
+.two-images-swiper {
+  display: none;
+}
+
+.img-description {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: bold;
+  font-style: italic;
+}
+
+q {
+  font-style: italic;
+}
+
+.citations {
+  max-width: 80%;
+  margin: 5px auto;
+}
+
+.not-analog {
+  border-radius: 5px;
+}
+
+#ticket-img {
+  width: 55%;
+  aspect-ratio: auto;
+  padding: 15px 0;
+}
+
+.footnote-ref, .return-ref {
+  text-decoration: none;
+}
+
+.final-sentence {
+  max-width: 100%;
+}
+
+/* Style for the footnotes container */
+.footnotes {
+  margin-top: 20px;
+  font-size: 0.8em;
+}
+.footnotes li {
+  margin-bottom: 10px;
+}
+.footnotes li p {
+  margin: 0;
+}
+
+.cc-image {
+  height: 22px;
+  margin-left: 3px;
+  vertical-align: text-bottom;
+  width: auto;
+}
+
+hr {
+  margin: 10px 0;
+  height: 1px;
+  border: none;
+  border-radius: 50%;
+  background-color: #787878;
+}
+
+footer {
+  margin-bottom: 20px;
+}
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .left {
+  text-align: left;
+}
+footer .right {
+  text-align: right;
+}
+footer p {
+  font-size: 1em;
+  margin: 0 auto;
+}
+
+.two-images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.two-images img {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+@media (max-width: 820px) {
+  body {
+    width: 100%;
+  }
+  h1 {
+    font-size: max(30px, 5.4vw);
+    max-width: 92%;
+  }
+  .img-description {
+    font-size: 0.9em;
+  }
+  .swiper-pagination-bullet {
+    height: 8px;
+    width: 8px;
+  }
+  .portrait-gallery img {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .two-images-swiper {
+    display: block;
+  }
+  .two-images-raw {
+    display: none;
+  }
+  #ticket-img {
+    width: 90%;
+    padding: 0;
+  }
+  .citations {
+    max-width: 90%;
+  }
+  hr {
+    height: 1px;
+    border: none;
+    border-radius: 50%;
+    background-color: black;
+    max-width: 90%;
+    margin: 15px auto;
+  }
+  footer .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  footer .left, footer .right {
+    text-align: center;
+    width: 100%;
+  }
+  footer .right {
+    margin-top: 10px; /* Adjust margin as needed */
+  }
+  .not-analog {
+    border-radius: 0;
+  }
+}
+
+/*# sourceMappingURL=blog-styles.css.map */

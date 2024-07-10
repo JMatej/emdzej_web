@@ -1,0 +1,47 @@
+// Do not forget that the path should be relative to the .css file
+
+// TODO: Check if 'static' loading of fonts cannot be done more efficiently
+// TODO: swap everywhere?
+
+// iA Writer Regular
+@font-face {
+  font-family: 'iA Writer Duo S';
+  src: url('../fonts/iAWriterDuoS-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'iA Writer Duospace';
+  src: url('../fonts/iAWriterDuospace-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'iA Writer Mono S';
+  src: url('../fonts/iAWriterMonoS-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'iA Writer Quattro S';
+  src: url('../fonts/iAWriterQuattroS-Regular.woff2') format('woff2');
+}
+
+
+// iA Writer Bold
+@font-face {
+  font-family: 'iA Writer Duo S Bold';
+  src: url('../fonts/iAWriterDuoS-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'iA Writer Duospace Bold';
+  src: url('../fonts/iAWriterDuospace-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'iA Writer Mono S Bold';
+  src: url('../fonts/iAWriterMonoS-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'iA Writer Quattro S Bold';
+  src: url('../fonts/iAWriterQuattroS-Bold.woff2') format('woff2');
+}
